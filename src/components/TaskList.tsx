@@ -1,7 +1,7 @@
 import React from "react";
 import TaskItem from "./TaskItem";
 import { Task } from "../App";
-import { MESSAGES } from "../constants"; // Import message constants
+import { MESSAGES } from "../constants"; 
 
 interface TaskListProps {
   tasks: Task[];

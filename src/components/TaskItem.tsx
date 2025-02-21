@@ -1,18 +1,7 @@
 import React from "react";
 import Button from "./Button";
-import { Task } from "../App";
 import { BUTTON_TEXT } from "../constants";
-
-interface TaskItemProps {
-  task: Task;
-  editTaskId: number | null;
-  editTaskText: string;
-  setEditTaskText: React.Dispatch<React.SetStateAction<string>>;
-  deleteTask: (id: number) => void;
-  editTask: (id: number, text: string) => void;
-  saveTask: (id: number) => void;
-  toggleTaskCompletion: (id: number) => void;
-}
+import { TaskItemProps } from "../types/task.types"; // ✅ Correct Import
 
 const TaskItem: React.FC<TaskItemProps> = ({
   task,
