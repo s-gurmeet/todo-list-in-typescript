@@ -1,7 +1,7 @@
 import React from "react";
 import Button from "./Button";
 import { BUTTON_TEXT } from "../constants";
-import { TaskItemProps } from "../types/task.types"; // ✅ Correct Import
+import { TaskItemProps } from "../types/task.types"; 
 
 const TaskItem: React.FC<TaskItemProps> = ({
   task,
