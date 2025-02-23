@@ -1,11 +1,16 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "target": "ES6", 
     "lib": [
       "dom",
       "dom.iterable",
       "esnext"
     ],
+    "module": "ESNext", 
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "jsx": "react-jsx",
+    
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
@@ -13,12 +18,18 @@
     "strict": true,
     "forceConsistentCasingInFileNames": true,
     "noFallthroughCasesInSwitch": true,
-    "module": "esnext",
-    "moduleResolution": "node",
-    "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx"
+
+    // Additional strict type-checking options
+    "strictNullChecks": true, // Prevents null/undefined errors
+    "strictFunctionTypes": true, // Ensures correct function typing
+    "strictPropertyInitialization": true, // Ensures properties are initialized
+    "noImplicitAny": true, // Prevents implicit 'any' types
+    "noUnusedLocals": true, // Warns about unused variables
+    "noUnusedParameters": true, // Warns about unused function parameters
+    "noImplicitReturns": true, // Ensures all code paths return a value
+    "noImplicitThis": true // Ensures 'this' is properly used
   },
   "include": [
     "src"

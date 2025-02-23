@@ -1,16 +1,22 @@
-import React from "react";
+
+import React, { useState } from "react";
 import Button from "./Button";
-import { BUTTON_TEXT, PLACEHOLDER_TEXT } from "../constants";
+import { BUTTON_TEXT, PLACEHOLDER_TEXT } from "../config/constants";
 
 interface TaskInputProps {
-  newTask: string;
-  setNewTask: (text: string) => void;
-  addTask: () => void;
-  toggleDarkMode: () => void;
-  isDarkMode: boolean;
+  addTask: (text: string) => void;
 }
 
-const TaskInput: React.FC<TaskInputProps> = ({ newTask, setNewTask, addTask, toggleDarkMode, isDarkMode }) => {
+const TaskInput: React.FC<TaskInputProps> = ({ addTask }) => {
+  const [newTask, setNewTask] = useState("");
+
+  const handleAddTask = () => {
+    if (newTask.trim()) {
+      addTask(newTask.trim());
+      setNewTask("");
+    }
+  };
+
   return (
     <div className="task-input-section">
       <input
@@ -20,11 +26,8 @@ const TaskInput: React.FC<TaskInputProps> = ({ newTask, setNewTask, addTask, tog
         onChange={(e) => setNewTask(e.target.value)}
         className="task-input"
       />
-      <Button onClick={addTask} className="add-task-button">
+      <Button onClick={handleAddTask} className="add-task-button">
         {BUTTON_TEXT.ADD_TASK}
-      </Button>
-      <Button onClick={toggleDarkMode} className="dark-mode-toggle">
-        {isDarkMode ? BUTTON_TEXT.LIGHT_MODE : BUTTON_TEXT.DARK_MODE}
       </Button>
     </div>
   );
