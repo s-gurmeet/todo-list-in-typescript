@@ -1,32 +1,4 @@
 
-// import React from "react";
-// import Button from "./Button";
-// import { BUTTON_TEXT } from "../config/constants";
-// import { Task } from "../types/task.types";
-
-// interface TaskItemProps {
-//   task: Task;
-//   deleteTask: (id: number) => void;
-//   toggleTaskCompletion: (id: number) => void;
-//   editTask: (id: number, text: string) => void;
-// }
-
-// const TaskItem: React.FC<TaskItemProps> = ({ task, deleteTask, toggleTaskCompletion, editTask }) => (
-//   <li className={`task-item ${task.completed ? "completed" : ""}`}>
-//     <span className="task-text" onClick={() => toggleTaskCompletion(task.id)}>
-//       {task.text}
-//     </span>
-//     <Button onClick={() => editTask(task.id, task.text)} className="edit-task-button">
-//       {BUTTON_TEXT.EDIT_TASK}
-//     </Button>
-//     <Button onClick={() => deleteTask(task.id)} className="delete-task-button">
-//       {BUTTON_TEXT.DELETE_TASK}
-//     </Button>
-//   </li>
-// );
-
-// export default TaskItem;
-
 import React from "react";
 import Button from "./Button";
 import { BUTTON_TEXT } from "../config/constants";
