@@ -29,13 +29,8 @@
 
 import React from "react";
 import Button from "./Button";
-<<<<<<< HEAD
-import { BUTTON_TEXT } from "../constants";
-import { TaskItemProps } from "../types/task.types"; 
-=======
 import { BUTTON_TEXT } from "../config/constants";
 import { Task } from "../types/task.types";
->>>>>>> dc6c22c (Updated Todo List with optimized styling and fixed edit button)
 
 interface TaskItemProps {
   task: Task;
